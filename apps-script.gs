@@ -156,49 +156,5 @@ function setupDashboard() {
     }
   }
 
-  SpreadsheetApp.getUi().alert("✅ ダッシュボードを作成しました！\n左下のシートタブから「ダッシュボード」をご確認ください。");
-}
-
-/**
- * 集計用: ファネル数（手動実行 or トリガーで定期実行）
- * 実行すると「summary」シートに集計結果を出力
- */
-function generateSummary() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
-  const logSheet = ss.getSheetByName(SHEET_NAME);
-  if (!logSheet) return;
-  const data = logSheet.getDataRange().getValues();
-  const headers = data.shift();
-  const evIdx = headers.indexOf("event");
-  const typeIdx = headers.indexOf("type_name");
-
-  const counts = {};
-  data.forEach(row => {
-    const ev = row[evIdx];
-    counts[ev] = (counts[ev] || 0) + 1;
-  });
-  const typeCounts = {};
-  data.filter(r => r[evIdx] === "diagnosed").forEach(r => {
-    const t = r[typeIdx];
-    typeCounts[t] = (typeCounts[t] || 0) + 1;
-  });
-
-  let sum = ss.getSheetByName("summary");
-  if (!sum) sum = ss.insertSheet("summary");
-  sum.clear();
-  sum.appendRow(["更新日時", new Date()]);
-  sum.appendRow([]);
-  sum.appendRow(["ファネル", "件数", "コンバージョン率"]);
-  const diagnosed = counts.diagnosed || 0;
-  const order = ["page_view", "start", "diagnosed", "click_line", "click_phone", "click_hp", "click_map"];
-  order.forEach(ev => {
-    const c = counts[ev] || 0;
-    const cv = diagnosed > 0 ? (c / diagnosed * 100).toFixed(1) + "%" : "-";
-    sum.appendRow([ev, c, cv]);
-  });
-  sum.appendRow([]);
-  sum.appendRow(["タイプ分布", "件数"]);
-  Object.entries(typeCounts)
-    .sort((a, b) => b[1] - a[1])
-    .forEach(([t, c]) => sum.appendRow([t, c]));
+  SpreadsheetApp.getUi().alert("ダッシュボードを作成しました。シートタブから「ダッシュボード」を開いてください。");
 }

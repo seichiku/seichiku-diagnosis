@@ -107,7 +107,8 @@ function setupDashboard() {
   funnelRows.forEach((row, i) => {
     const r = 5 + i;
     dash.getRange(r, 1).setValue(row[0]);
-    dash.getRange(r, 2).setFormula(`=COUNTIF(log!C:C, "${row[1]}")`);
+    // ユニークな人数(session_id)でカウント → 同じ人が連打しても1人としか数えない
+    dash.getRange(r, 2).setFormula(`=COUNTUNIQUEIFS(log!B:B, log!C:C, "${row[1]}")`);
     // 「診断完了」を分母にしたコンバージョン率
     dash.getRange(r, 3).setFormula(`=IFERROR(IF(B${r}=0,"-",TEXT(B${r}/B$7, "0.0%")), "-")`);
   });
@@ -135,7 +136,8 @@ function setupDashboard() {
   types.forEach((t, i) => {
     const r = tStart + 2 + i;
     dash.getRange(r, 1).setValue(t);
-    dash.getRange(r, 2).setFormula(`=COUNTIF(log!E:E, "${t}")`);
+    // ユニークな人数(session_id)でカウント
+    dash.getRange(r, 2).setFormula(`=COUNTUNIQUEIFS(log!B:B, log!E:E, "${t}")`);
   });
 
   // 列幅

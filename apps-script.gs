@@ -68,6 +68,96 @@ function doGet() {
 }
 
 /**
+ * ★ 初回1回だけ実行 ★
+ * リアルタイム集計シート「ダッシュボード」を作成（COUNTIF式で自動更新）
+ * Apps Scriptエディタで関数名「setupDashboard」を選んで実行
+ */
+function setupDashboard() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let dash = ss.getSheetByName("ダッシュボード");
+  if (!dash) dash = ss.insertSheet("ダッシュボード", 0); // 先頭に表示
+  dash.clear();
+
+  // タイトル
+  dash.getRange("A1:C1").merge()
+    .setValue("📊 成竹診断ツール  リアルタイム集計")
+    .setFontSize(16).setFontWeight("bold")
+    .setBackground("#0c4a6e").setFontColor("#fff")
+    .setHorizontalAlignment("center");
+  dash.setRowHeight(1, 36);
+
+  // ファネルセクション
+  dash.getRange("A3").setValue("🔻 ファネル（人数の流れ）")
+    .setFontWeight("bold").setFontSize(13).setBackground("#fde047");
+  dash.getRange("A3:C3").merge();
+
+  dash.getRange("A4:C4").setValues([["イベント", "人数", "診断完了比"]])
+    .setFontWeight("bold").setBackground("#f3f4f6");
+
+  const funnelRows = [
+    ["1. ページ閲覧",          "page_view"],
+    ["2. 診断スタート",        "start"],
+    ["3. 診断完了 ⭐",          "diagnosed"],
+    ["4-A. LINEへ移行",        "click_line"],
+    ["4-B. 電話で予約クリック", "click_phone"],
+    ["4-C. HPで詳しく見る",    "click_hp"],
+    ["4-D. 地図を確認",        "click_map"],
+  ];
+
+  funnelRows.forEach((row, i) => {
+    const r = 5 + i;
+    dash.getRange(r, 1).setValue(row[0]);
+    dash.getRange(r, 2).setFormula(`=COUNTIF(log!C:C, "${row[1]}")`);
+    // 「診断完了」を分母にしたコンバージョン率
+    dash.getRange(r, 3).setFormula(`=IFERROR(IF(B${r}=0,"-",TEXT(B${r}/B$7, "0.0%")), "-")`);
+  });
+
+  // 強調: 診断完了行
+  dash.getRange("A7:C7").setBackground("#fef3c7").setFontWeight("bold");
+  // 強調: LINE移行行
+  dash.getRange("A8:C8").setBackground("#dcfce7");
+
+  // タイプ分布セクション
+  const tStart = 14;
+  dash.getRange(tStart, 1).setValue("🦁 タイプ別 診断分布")
+    .setFontWeight("bold").setFontSize(13).setBackground("#fde047");
+  dash.getRange(tStart, 1, 1, 3).merge();
+
+  dash.getRange(tStart + 1, 1, 1, 2).setValues([["タイプ名", "人数"]])
+    .setFontWeight("bold").setBackground("#f3f4f6");
+
+  const types = [
+    "ぎっくり腰オフィスゴリラ", "在宅ぎっくり仔猫", "PC疲れ・美の白鳥", "肩こり美ナマケモノ",
+    "万年肩こり鋼鉄カブト", "だるおも在宅パンダ", "むくみ脱出スワン", "冷えとり美ペンギン",
+    "スポーツ捻挫チーター", "やんちゃ突発ジャガー", "動ける美のシカ", "日焼け美フラミンゴ",
+    "働きすぎ鋼の馬", "サボリ上手のキツネ", "キレイ目アスリート狼", "自由気ままな美ライオン",
+  ];
+  types.forEach((t, i) => {
+    const r = tStart + 2 + i;
+    dash.getRange(r, 1).setValue(t);
+    dash.getRange(r, 2).setFormula(`=COUNTIF(log!E:E, "${t}")`);
+  });
+
+  // 列幅
+  dash.setColumnWidth(1, 240);
+  dash.setColumnWidth(2, 90);
+  dash.setColumnWidth(3, 110);
+
+  // logシートのテスト行（test-session）を削除
+  const log = ss.getSheetByName("log");
+  if (log) {
+    const data = log.getDataRange().getValues();
+    for (let i = data.length - 1; i >= 1; i--) {
+      if (data[i][1] === "test-session" || data[i][2] === "test") {
+        log.deleteRow(i + 1);
+      }
+    }
+  }
+
+  SpreadsheetApp.getUi().alert("✅ ダッシュボードを作成しました！\n左下のシートタブから「ダッシュボード」をご確認ください。");
+}
+
+/**
  * 集計用: ファネル数（手動実行 or トリガーで定期実行）
  * 実行すると「summary」シートに集計結果を出力
  */

@@ -1,0 +1,1269 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c4a6e">
+<title>カラダMBTI診断 | 成竹鍼灸整骨院 東砂院</title>
+<meta name="description" content="8問でわかる、あなたのカラダタイプ診断。16タイプから最適な施術プランを提案します。">
+
+<meta property="og:title" content="カラダMBTI診断｜成竹鍼灸整骨院 東砂院">
+<meta property="og:description" content="8問でわかる、あなたのカラダタイプ。16タイプの動物キャラから最適な施術プランを提案します。">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #fdfbf5;
+    --ink: #1a2332;
+    --sub: #4a5a72;
+    --line: #e6dfd0;
+    --accent: #0c4a6e;
+    --accent2: #d97706;
+    --pink: #fce4ec;
+    --soft: #fff8e8;
+    --shadow: 0 8px 28px rgba(20,30,50,.08);
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 10% 0%, rgba(252,228,236,.4), transparent 40%),
+      radial-gradient(circle at 90% 100%, rgba(255,248,232,.6), transparent 40%);
+  }
+  .wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 24px 18px 80px;
+  }
+  .brand {
+    text-align: center;
+    font-size: 12px;
+    color: var(--sub);
+    letter-spacing: .08em;
+    margin-bottom: 8px;
+  }
+  .brand b { color: var(--accent); font-weight: 700; }
+
+  /* ===== Hero ===== */
+  .hero {
+    text-align: center;
+    padding: 28px 18px 32px;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+  }
+  .hero .eyebrow {
+    display: inline-block;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    color: var(--accent2);
+    background: var(--soft);
+    border-radius: 999px;
+    padding: 4px 14px;
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.35;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+  .hero h1 .accent { color: var(--accent2); }
+  .hero .sub {
+    font-size: 14px;
+    color: var(--sub);
+    margin: 8px 0 18px;
+  }
+  .hero .badge-row {
+    display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+    margin: 16px 0 4px;
+  }
+  .hero .badge {
+    font-size: 11px;
+    background: #f0f4f8;
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-weight: 600;
+  }
+  .hero .badge-hot {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 3px 10px rgba(217,119,6,.35);
+  }
+  .hero .badge-sub {
+    background: linear-gradient(135deg, #0c4a6e, #1e6e9b);
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 3px 10px rgba(12,74,110,.3);
+  }
+
+  /* 無料体験 推しバナー */
+  .free-banner {
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+    border: 2px dashed #f59e0b;
+    border-radius: 14px;
+    padding: 14px 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .free-banner .ribbon {
+    display: inline-block;
+    background: #d97706;
+    color: #fff;
+    font-weight: 800;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    letter-spacing: .05em;
+  }
+  .free-banner .ttl {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    color: #92400e;
+    line-height: 1.4;
+  }
+  .free-banner .sub-txt {
+    font-size: 12px;
+    color: #78350f;
+    margin-top: 4px;
+  }
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 4px;
+    margin: 16px 0 8px;
+    font-size: 22px;
+  }
+  .preview-grid span {
+    aspect-ratio: 1;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--soft);
+    border-radius: 8px;
+  }
+  .preview-cap {
+    font-size: 11px;
+    color: var(--sub);
+    margin-top: 4px;
+  }
+
+  /* ===== Buttons ===== */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 0;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    text-decoration: none;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #0c4a6e 0%, #1e6e9b 100%);
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(12,74,110,.3);
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(12,74,110,.36); }
+  .btn-ghost {
+    background: #fff;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+  }
+  .btn-accent {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(217,119,6,.3);
+  }
+  .btn-line {
+    background: #06c755;
+    color: #fff;
+  }
+  .btn + .btn { margin-top: 10px; }
+
+  /* ===== Question screen ===== */
+  .progress {
+    height: 8px;
+    background: #eee5d2;
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 18px 0 14px;
+  }
+  .progress > i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    width: 0%;
+    transition: width .35s ease;
+  }
+  .qcard {
+    background: #fff;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    padding: 24px 20px;
+  }
+  .qnum {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    color: var(--accent2);
+    font-size: 13px;
+    letter-spacing: .1em;
+  }
+  .qtext {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 6px 0 18px;
+    line-height: 1.5;
+  }
+  .opts { display: flex; flex-direction: column; gap: 10px; }
+  .opt {
+    text-align: left;
+    background: #fff;
+    border: 2px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all .12s ease;
+    display: flex; gap: 12px; align-items: flex-start;
+    line-height: 1.5;
+    font-family: inherit;
+  }
+  .opt:hover { border-color: var(--accent); background: #f4f9fc; }
+  .opt .emoji { font-size: 22px; line-height: 1; }
+  .back {
+    margin-top: 14px;
+    text-align: center;
+    background: none; border: 0;
+    color: var(--sub);
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* ===== Result ===== */
+  .result-hero {
+    background: linear-gradient(160deg, #fff 0%, var(--soft) 100%);
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    padding: 28px 22px;
+    text-align: center;
+  }
+  .type-emoji {
+    font-size: 78px;
+    line-height: 1;
+    margin: 0 0 8px;
+  }
+  .type-code {
+    display: inline-block;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 999px;
+    padding: 4px 12px;
+    letter-spacing: .12em;
+    margin-bottom: 10px;
+  }
+  .type-name {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 4px 0 10px;
+    color: var(--ink);
+  }
+  .type-tagline {
+    color: var(--accent2);
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .type-desc {
+    font-size: 14px;
+    color: var(--sub);
+    text-align: left;
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-top: 14px;
+    line-height: 1.7;
+  }
+  .axes {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    margin: 14px 0 0;
+  }
+  .axis {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 12px;
+    text-align: left;
+  }
+  .axis b { display: block; color: var(--accent); font-size: 11px; margin-bottom: 2px; }
+
+  .section {
+    margin-top: 22px;
+    background: #fff;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    padding: 22px 20px;
+  }
+  .section.featured {
+    background: linear-gradient(160deg, #fff 0%, #f0f7ff 100%);
+    border: 2px solid var(--accent);
+  }
+  .section h2 {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0 0 12px;
+    color: var(--accent);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section h2 .tag {
+    background: var(--accent2); color: #fff;
+    font-size: 11px; padding: 3px 8px; border-radius: 6px;
+    font-weight: 700;
+  }
+
+  .menu {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .menu .name {
+    font-weight: 700; font-size: 15px;
+    display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+    flex-wrap: wrap;
+  }
+  .menu .price { color: var(--accent2); font-weight: 800; }
+  .menu .why { font-size: 13px; color: var(--sub); margin-top: 4px; }
+
+  /* 保険診療カード */
+  .ins-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    background: #f8fbfd;
+  }
+  .ins-card .ins-head {
+    display: flex; align-items: baseline; gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .ins-card .ins-emoji { font-size: 20px; }
+  .ins-card .ins-name { font-weight: 800; font-size: 15px; color: var(--accent); }
+  .ins-card .ins-price { font-weight: 800; color: var(--accent2); font-size: 14px; margin-left: auto; }
+  .ins-card .ins-target { font-size: 13px; color: var(--ink); margin: 2px 0; }
+  .ins-card .ins-note { font-size: 12px; color: var(--sub); }
+
+  /* オプションカード */
+  .opt-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .opt-card .opt-emoji {
+    font-size: 24px;
+    background: var(--soft);
+    width: 42px; height: 42px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .opt-card .opt-body { flex: 1; }
+  .opt-card .opt-name {
+    font-weight: 700; font-size: 14.5px;
+    display: flex; justify-content: space-between; gap: 8px;
+    flex-wrap: wrap; align-items: baseline;
+  }
+  .opt-card .opt-price { color: var(--accent2); font-weight: 800; font-size: 13px; }
+  .opt-card .opt-why { font-size: 12.5px; color: var(--sub); margin-top: 3px; line-height: 1.5; }
+
+  /* オプション回数券のお得さテーブル */
+  .opt-deal {
+    margin-top: 14px;
+    background: linear-gradient(135deg, #fff8e8, #fef3c7);
+    border: 2px solid #fcd34d;
+    border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .opt-deal-label {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 13px;
+    color: #92400e;
+    margin-bottom: 8px;
+  }
+  .opt-deal-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  .opt-deal-table th, .opt-deal-table td {
+    padding: 8px 6px;
+    text-align: left;
+    border-bottom: 1px solid #fde68a;
+  }
+  .opt-deal-table tr:last-child th,
+  .opt-deal-table tr:last-child td { border-bottom: 0; }
+  .opt-deal-table th { font-weight: 700; color: #78350f; width: 25%; }
+  .opt-deal-table td { color: #1a2332; }
+  .opt-deal-table td b { color: var(--accent2); font-family: "M PLUS Rounded 1c", sans-serif; font-size: 15px; }
+  .opt-deal-table th.best {
+    color: #fff; background: var(--accent2);
+    border-radius: 6px; text-align: center; padding: 6px 4px;
+  }
+  .opt-deal-table .off {
+    display: inline-block;
+    background: #fff; color: var(--accent2);
+    font-size: 11px; font-weight: 800;
+    padding: 1px 6px; border-radius: 4px;
+    margin-left: 6px;
+  }
+  .opt-deal-table .best-off { background: var(--accent2); color: #fff; }
+  .opt-deal-tip {
+    margin: 10px 0 0;
+    font-size: 12.5px;
+    color: #78350f;
+    text-align: center;
+  }
+
+  .pkg {
+    background: linear-gradient(135deg, #fff8e8, #fef3c7);
+    border: 2px solid #fcd34d;
+    border-radius: 14px;
+    padding: 16px;
+    margin-top: 8px;
+  }
+  .pkg .pkg-label {
+    display: inline-block; font-size: 11px; font-weight: 800;
+    background: var(--accent2); color: #fff;
+    padding: 2px 8px; border-radius: 6px; margin-bottom: 6px;
+  }
+  .pkg .pkg-name { font-weight: 800; font-size: 16px; }
+  .pkg .pkg-price { font-size: 22px; color: var(--accent2); font-weight: 800; margin: 4px 0; font-family: "M PLUS Rounded 1c", sans-serif; }
+  .pkg .pkg-detail { font-size: 13px; color: var(--sub); }
+
+  /* === Subscription cards === */
+  .sub-card {
+    border-radius: 16px;
+    padding: 18px;
+    margin-top: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sub-card.main {
+    background: linear-gradient(135deg, #0c4a6e 0%, #1e6e9b 100%);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(12,74,110,.25);
+  }
+  .sub-card.sub {
+    background: #fff;
+    border: 2px dashed var(--accent);
+  }
+  .sub-card .sub-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    letter-spacing: .05em;
+  }
+  .sub-card.main .sub-label {
+    background: #fde047; color: #422006;
+  }
+  .sub-card.sub .sub-label {
+    background: var(--accent); color: #fff;
+  }
+  .sub-card .sub-emoji {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .sub-card .sub-name {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 1.35;
+  }
+  .sub-card .sub-price {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    margin: 6px 0 2px;
+  }
+  .sub-card.main .sub-price small,
+  .sub-card.sub .sub-price small { font-size: 13px; font-weight: 500; opacity: .8; }
+  .sub-card .sub-tagline {
+    font-size: 13px;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+  .sub-card.main .sub-tagline { color: #e0f2fe; }
+  .sub-card.sub .sub-tagline { color: var(--sub); }
+  .sub-card .sub-points {
+    margin: 10px 0 0;
+    padding-left: 18px;
+    font-size: 13px;
+  }
+  .sub-card .sub-points li { margin: 3px 0; }
+  .sub-card.main .sub-points { color: #f0f9ff; }
+
+  .duo-tip {
+    background: var(--pink);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-top: 12px;
+    font-size: 13px;
+    text-align: center;
+    color: #831843;
+    font-weight: 600;
+  }
+  .duo-tip b { color: #be185d; }
+
+  .homecare {
+    background: var(--pink);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-top: 10px;
+  }
+  .homecare b { color: #b6336a; }
+  .homecare ul { margin: 6px 0 0; padding-left: 20px; }
+  .homecare li { font-size: 13.5px; margin: 4px 0; }
+
+  .clinic {
+    background: #f6f9fb;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .clinic b { color: var(--accent); }
+
+  .cta-stack { margin-top: 22px; }
+
+  .share-row {
+    display: flex; gap: 8px;
+    margin-top: 10px;
+  }
+  .share-row .btn { padding: 12px; font-size: 14px; }
+
+  .footer-note {
+    text-align: center;
+    color: var(--sub);
+    font-size: 11px;
+    margin-top: 22px;
+    line-height: 1.6;
+  }
+  .footer-note a { color: var(--accent); }
+
+  /* utility */
+  .hidden { display: none !important; }
+  .center { text-align: center; }
+  .small { font-size: 12px; color: var(--sub); }
+
+  @media (max-width: 380px) {
+    .hero h1 { font-size: 24px; }
+    .qtext { font-size: 17px; }
+    .type-name { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="brand">成竹鍼灸整骨院 <b>東砂院</b> 公式</div>
+
+<!-- ====== Screen: START ====== -->
+<section id="screen-start">
+  <div class="hero">
+    <span class="eyebrow">8問・1分でわかる</span>
+    <h1>カラダ<span class="accent">MBTI</span>診断</h1>
+    <p class="sub">あなたのカラダは何タイプ？<br>16タイプの動物キャラから、最適な施術プランを提案します。</p>
+    <div class="preview-grid" id="previewGrid"></div>
+    <div class="preview-cap">▲ 16タイプから1つに診断</div>
+    <div class="badge-row">
+      <span class="badge badge-hot">🎁 初回無料体験OK</span>
+      <span class="badge">リピート率89%</span>
+      <span class="badge">創業30年・累計14万人</span>
+    </div>
+  </div>
+
+  <div class="cta-stack">
+    <button class="btn btn-primary" id="btnStart">診断スタート（1分）</button>
+  </div>
+</section>
+
+<!-- ====== Screen: QUESTIONS ====== -->
+<section id="screen-q" class="hidden">
+  <div class="progress"><i id="bar"></i></div>
+  <div class="qcard">
+    <div class="qnum" id="qnum">Q1 / 8</div>
+    <div class="qtext" id="qtext"></div>
+    <div class="opts" id="opts"></div>
+    <button class="back" id="btnBack">← 前の質問にもどる</button>
+  </div>
+</section>
+
+<!-- ====== Screen: RESULT ====== -->
+<section id="screen-result" class="hidden">
+  <div class="result-hero">
+    <div class="type-emoji" id="rEmoji">🦊</div>
+    <div class="type-code" id="rCode">XXXX</div>
+    <div class="type-name" id="rName">タイプ名</div>
+    <div class="type-tagline" id="rTagline">キャッチコピー</div>
+    <div class="axes" id="rAxes"></div>
+    <div class="type-desc" id="rDesc">説明文</div>
+  </div>
+
+  <div class="section featured">
+    <h2>💎 あなたにいちばん効く通い放題サブスク</h2>
+
+    <div class="sub-card main" id="rSubMain">
+      <span class="sub-label">⭐ あなたの本命プラン</span>
+      <div class="sub-emoji" id="rSubMainEmoji"></div>
+      <div class="sub-name" id="rSubMainName"></div>
+      <div class="sub-price" id="rSubMainPrice"></div>
+      <div class="sub-tagline" id="rSubMainTag"></div>
+      <ul class="sub-points" id="rSubMainPoints"></ul>
+    </div>
+
+    <div class="sub-card sub" id="rSubSub">
+      <span class="sub-label">＋ ダブル使いで さらに◎</span>
+      <div class="sub-emoji" id="rSubSubEmoji"></div>
+      <div class="sub-name" id="rSubSubName"></div>
+      <div class="sub-price" id="rSubSubPrice"></div>
+      <div class="sub-tagline" id="rSubSubTag"></div>
+    </div>
+
+    <div class="duo-tip">
+      <b>💡 2つ併用すると、月額¥21,560で「カラダ＋見た目」まるごとケア</b><br>
+      <span class="small">(週1ペースで通えば、1回あたり実質¥2,695)</span>
+    </div>
+
+    <p class="small" style="margin-top:10px;">※ サブスク契約は来院時にスタッフへ。途中解約・プラン変更も可能です。</p>
+  </div>
+
+  <div class="section">
+    <h2>🏥 あなたに使える保険診療 <span class="tag">保険適用</span></h2>
+    <div id="rInsurance"></div>
+    <p class="small" style="margin-top:8px;">※ 保険適用の可否は症状により判断します。来院時にご相談ください。</p>
+  </div>
+
+  <div class="section">
+    <h2>➕ 効果UP！おすすめオプション</h2>
+    <p class="small" style="margin-top:-6px;margin-bottom:10px;">本コースに追加すると、あなたのお悩みにより効果的です。<br><b>単発 +¥2,500</b> / 回数券ならもっとお得 ↓</p>
+    <div id="rOptions"></div>
+
+    <div class="opt-deal">
+      <span class="opt-deal-label">💡 回数券ならこんなにお得！</span>
+      <table class="opt-deal-table">
+        <tr><th>4回券</th><td>¥8,800</td><td>1回 <b>¥2,200</b><span class="off">−12%</span></td></tr>
+        <tr><th>9回券</th><td>¥18,000</td><td>1回 <b>¥2,000</b><span class="off">−20%</span></td></tr>
+        <tr><th class="best">18回券</th><td>¥32,400</td><td>1回 <b>¥1,800</b><span class="off best-off">−28%</span></td></tr>
+      </table>
+      <p class="opt-deal-tip">気に入ったオプションは <b>18回券</b> がいちばんお得！1回あたり¥700お得です。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🔥 短期集中で本気で変えたい方へ <span class="tag">回数券</span></h2>
+    <div class="pkg">
+      <span class="pkg-label">集中ケアプラン</span>
+      <div class="pkg-name" id="rPkgName"></div>
+      <div class="pkg-price" id="rPkgPrice"></div>
+      <div class="pkg-detail" id="rPkgDetail"></div>
+    </div>
+    <p class="small" style="margin-top:8px;">※ 詳細は来院時にスタッフへお気軽にご相談ください。</p>
+  </div>
+
+  <div class="section">
+    <h2>🍽 おうちでの食事指導</h2>
+    <div class="homecare">
+      <b>あなたのカラダを内側から治す3つの食習慣</b>
+      <ul id="rHomeCare"></ul>
+      <p class="small" style="margin-top:10px;color:#831843;">※ 食事は施術と同じくらい大切。3つ全部でなくてOK、まずは1つから始めましょう。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📍 東砂院でお待ちしています</h2>
+    <div class="clinic">
+      <b>成竹鍼灸整骨院 東砂院</b><br>
+      〒136-0074 東京都江東区東砂6-13-6<br>
+      TEL: <a href="tel:0336996213">03-3699-6213</a><br>
+      営業: 午前 9:00〜12:00 / 午後 14:00〜18:00<br>
+      休診: 日曜・祝日<br>
+      最寄: 都営新宿線「大島駅」/ 東西線「南砂町駅」
+    </div>
+
+    <div class="free-banner">
+      <span class="ribbon">初回限定</span>
+      <div class="ttl">🎁 初回 無料体験 受付中</div>
+      <div class="sub-txt">「予約時に”診断を見た”とお伝えください」</div>
+    </div>
+
+    <div class="cta-stack">
+      <a class="btn btn-accent" href="tel:0336996213" data-track="click_phone">📞 無料体験を電話で予約する</a>
+      <a class="btn btn-line" id="ctaLine" href="#" target="_blank" rel="noopener" data-track="click_line">💬 公式LINEで予約する</a>
+      <a class="btn btn-ghost" href="https://www.seichiku.com/" target="_blank" rel="noopener" data-track="click_hp">🌐 院のHPで詳しく見る</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=%E6%88%90%E7%AB%B9%E9%8D%BC%E7%81%B8%E6%95%B4%E9%AA%A8%E9%99%A2%20%E6%9D%B1%E7%A0%82%E9%99%A2" target="_blank" rel="noopener" data-track="click_map">🗺 地図を見る（Googleマップ）</a>
+    </div>
+
+    <div class="share-row">
+      <button class="btn btn-ghost" id="btnShare">📤 結果をシェア</button>
+      <button class="btn btn-ghost" id="btnRetry">↺ もう一度</button>
+    </div>
+  </div>
+
+  <p class="footer-note">
+    ※ 本診断は医療診断ではありません。気になる症状は施術者にご相談ください。<br>
+    © 成竹鍼灸整骨院 東砂院
+  </p>
+</section>
+
+</div>
+
+<script>
+/* ==========================================================
+   CONFIG — 院ごとに差し替えればSaaS化できるブロック
+   ========================================================== */
+const CONFIG = {
+  clinic: {
+    name: "成竹鍼灸整骨院 東砂院",
+    tel: "0336996213",
+    telDisp: "03-3699-6213",
+  },
+
+  // 8問・各軸2問
+  // 軸: D(デスク中心) vs A(動く), S(急性ピリッ) vs C(慢性じわじわ),
+  //     H(治療優先) vs B(美容・若返り優先), I(集中して通う) vs M(マイペース月額)
+  questions: [
+    {
+      axis: "DA",
+      text: "ふだん、座っている時間はどれくらい？",
+      options: [
+        { label: "1日6時間以上はイスかソファ。デスクワーク・運転が多い", value: "D", emoji: "💺" },
+        { label: "立ち仕事・外回り・育児で動きっぱなし。座る暇がない", value: "A", emoji: "🏃" },
+        { label: "日によってバラバラ。座る日もあれば動く日もある", value: "both", emoji: "⚖️" },
+      ],
+    },
+    {
+      axis: "DA",
+      text: "休日の過ごし方は、どっちが近い？",
+      options: [
+        { label: "家でゆっくり。Netflixや読書で充電したい派", value: "D", emoji: "🛋" },
+        { label: "外で散歩・スポーツ・お出かけ。じっとできない派", value: "A", emoji: "⛰" },
+        { label: "その日の気分次第。どちらも好き", value: "both", emoji: "🎲" },
+      ],
+    },
+    {
+      axis: "SC",
+      text: "いまカラダの痛み・違和感、どんな感じ？",
+      options: [
+        { label: "ある日突然ズキッ。きっかけがハッキリしている（ぎっくり腰など）", value: "S", emoji: "⚡" },
+        { label: "いつの間にか、じわじわ。気づけば何年も続いている", value: "C", emoji: "🌫" },
+        { label: "急に痛むこともあるし、慢性的なコリもある", value: "both", emoji: "🌀" },
+      ],
+    },
+    {
+      axis: "SC",
+      text: "痛みの「強さの波」は？",
+      options: [
+        { label: "動くと激痛。じっとしてればマシ。今すぐどうにかしたい", value: "S", emoji: "💥" },
+        { label: "ずーんと重い感じが常にある。生活はできるけど、しんどい", value: "C", emoji: "😮‍💨" },
+        { label: "特に痛みはない。予防・メンテで来たい", value: "both", emoji: "🌱" },
+      ],
+    },
+    {
+      axis: "HB",
+      text: "鏡を見たとき、つい気になるのは？",
+      options: [
+        { label: "肩・腰・首のコリや姿勢のゆがみ。とにかくスッキリしたい", value: "H", emoji: "🦴" },
+        { label: "フェイスライン・ハリ・むくみ。若々しさを取り戻したい", value: "B", emoji: "💆‍♀️" },
+        { label: "正直、どっちも気になる！両方ケアしたい", value: "both", emoji: "🪞" },
+      ],
+    },
+    {
+      axis: "HB",
+      text: "整骨院・鍼灸院に行くなら、いちばんの目的は？",
+      options: [
+        { label: "痛み・不調をちゃんと治したい。根本から良くしたい", value: "H", emoji: "🩺" },
+        { label: "見た目の印象アップ・美容・予防。長く美しくいたい", value: "B", emoji: "✨" },
+        { label: "治療も美容も、どちらも本気でやりたい欲張り派", value: "both", emoji: "💎" },
+      ],
+    },
+    {
+      axis: "IM",
+      text: "通い方の理想に近いのは？",
+      options: [
+        { label: "短期集中でしっかり良くしたい。週1〜2回でも通える", value: "I", emoji: "🔥" },
+        { label: "マイペースに月数回、長くゆるく続けたい", value: "M", emoji: "🌿" },
+        { label: "状況に応じて。集中したい時期もあれば、ゆるめたい時もある", value: "both", emoji: "🌊" },
+      ],
+    },
+    {
+      axis: "IM",
+      text: "お金と時間、どっちを優先したい？",
+      options: [
+        { label: "ちゃんと回数券を使って、トータルでお得に集中ケア", value: "I", emoji: "💳" },
+        { label: "月額サブスクで「行きたい時に通える」自由度がほしい", value: "M", emoji: "🗓" },
+        { label: "まずは単発で都度都度、自分のペースを掴みたい", value: "both", emoji: "🆓" },
+      ],
+    },
+  ],
+
+  /* ===== タイプ定義（16通り） ===== */
+  // コード: <DA><SC><HB><IM>
+  types: {
+    // ----- D(デスク) × S(急性) -----
+    "DSHI": { e: "🦍", name: "ぎっくり腰オフィスゴリラ",
+      tag: "今すぐ救出！集中ケアで一気に立て直す",
+      desc: "PC・運転で固めた腰に、ある日ズキッ。「やってしまった…」と動けなくなるタイプ。あなたの体は、限界まで頑張ってからSOSを出す働き者。今は短期集中で、いったん完全リセットが必要です。",
+      menu: ["order60", "elvio40"], pkg: "order12", opts: ["highvolt", "kotsuban"], care: ["急性炎症期は青魚（サバ・サンマ）のオメガ3を毎日1切れ", "毎食タンパク質20g以上（卵2個・鶏むね100g）で組織修復", "砂糖・揚げ物は炎症を悪化させるので、復活までNG"]
+    },
+    "DSHM": { e: "🐱", name: "在宅ぎっくり仔猫",
+      tag: "無理せず、月額サブスクで守る派",
+      desc: "在宅・デスクワークが多く、ふとした瞬間にぎっくり。痛みは怖いけど、毎週通うのはちょっと…という慎重派。「行きたい時に行ける」サブスクで予防していくのが、あなたのペースに合っています。",
+      menu: ["mainteSub", "seitai30"], pkg: "order12", opts: ["kotsuban", "kyu"], care: ["朝の白湯＋具沢山味噌汁で内臓を芯から温める", "玄米・雑穀米でビタミンB群を補給（神経の修復に必須）", "夜のドカ食いNG。20時以降は温かい豆乳1杯までに"]
+    },
+    "DSBI": { e: "🦢", name: "PC疲れ・美の白鳥",
+      tag: "顔の疲れ感を、集中で消す",
+      desc: "デスクで目と顔がガチガチ。鏡を見るたび「疲れた顔だな…」と感じるタイプ。表面ではなく、奥の筋肉まで届く鍼で集中ケアすれば、肌の透明感までごっそり戻ります。",
+      menu: ["biharikei60", "elvio40"], pkg: "biharikeiOpt9", opts: ["hariOpt", "head"], care: ["パプリカ＋キウイで『鉄分＋ビタミンC』コラーゲン生成セットを毎日", "1週間の砂糖断ちで肌の糖化・くすみがリセット", "目の疲れにはブルーベリーorルテイン豊富なほうれん草"]
+    },
+    "DSBM": { e: "🦥", name: "肩こり美ナマケモノ",
+      tag: "サブスク通い放題で、ゆるく可愛く",
+      desc: "肩こりはあるけど、急性の痛みではない。むしろ「美容のついでに肩もラクにしたい」欲が強いタイプ。サブスクで月8〜10回通えば、コリも肌も同時に整います。",
+      menu: ["biharikeiSub", "elvio30"], pkg: "biharikeiOpt9", opts: ["hariOpt", "head"], care: ["朝食にタンパク質をプラス（ヨーグルト＋ナッツでもOK）", "食事の最初は野菜or味噌汁から（血糖値スパイク予防＝糖化対策）", "甘い物は『ご褒美デー』だけ。週2回までに"]
+    },
+
+    // ----- D(デスク) × C(慢性) -----
+    "DCHI": { e: "🦏", name: "万年肩こり鋼鉄カブト",
+      tag: "「肩こり界の重鎮」を本気で卒業",
+      desc: "もう10年以上、肩・首・背中がガチガチ。マッサージしても3日で戻る…の繰り返し。あなたの体は、深い層に「痛みのクセ」が染みついている状態。鍼＋手技＋電気の組み合わせで、奥の筋肉から本気で動かしましょう。",
+      menu: ["order60", "seitai60"], pkg: "order24", opts: ["kotsuban", "ems"], care: ["マグネシウム食材（豆腐・海藻・ナッツ）でガチガチ筋肉をほぐす", "1日1食は抗炎症食（青魚・ターメリック・生姜）を意識", "カフェインは14時以降カット（睡眠の質UPで回復力UP）"]
+    },
+    "DCHM": { e: "🐼", name: "だるおも在宅パンダ",
+      tag: "コリ・だるさを月額で「飼い慣らす」",
+      desc: "在宅ワークで肩も腰も背中もだるい。でも、痛くて動けないほどじゃない。「ちょこちょこ整えたい」あなたには、月額サブスクで2〜3週に1回のメンテが最適です。",
+      menu: ["mainteSub", "seitai30"], pkg: "order12", opts: ["kyu", "kotsuban"], care: ["朝の白湯＋しょうがで代謝スイッチON", "玄米・雑穀でビタミンB群（疲労回復の必須栄養素）を補給", "夜のラーメン・パスタは控えめに。冷えと炎症のWパンチ"]
+    },
+    "DCBI": { e: "🌸", name: "むくみ脱出スワン",
+      tag: "顔と体、両方まとめて集中レスキュー",
+      desc: "顔のむくみ、たるみ、フェイスラインのぼやけ。デスクワークで巡りが滞った結果、肌のハリも落ちてきたタイプ。短期集中の美容鍼12回プランで、自分史上ベストな顔を取り戻しましょう。",
+      menu: ["biharikei60", "order60"], pkg: "biharikeiOpt9", opts: ["hariOpt", "cupping"], care: ["塩分は1日6g以下（外食ラーメン・うどんは月3回まで）", "カリウム食材（バナナ・アボカド・ほうれん草）を毎日", "抗酸化食材（ベリー・カカオ70%以上・緑茶）で糖化&酸化を撃退"]
+    },
+    "DCBM": { e: "🐧", name: "冷えとり美ペンギン",
+      tag: "サブスクで「ずっと続けたい」派",
+      desc: "冷え、むくみ、肌のくすみ。慢性的だけど、急いで治したい感じではない。あなたは「コツコツ続けた人が勝つ」タイプ。美容鍼サブスクで月8回通えば、半年後に劇的な差が出ます。",
+      menu: ["biharikeiSub", "elvio40"], pkg: "biharikeiOpt9", opts: ["kyu", "hariOpt"], care: ["朝は白湯＋根菜の味噌汁で内臓温活", "発酵食品（味噌・納豆・キムチ）を1日1品マスト", "冷たい飲み物・サラダ中心はNG。常温or温かい食事を主軸に"]
+    },
+
+    // ----- A(アクティブ) × S(急性) -----
+    "ASHI": { e: "🐆", name: "スポーツ捻挫チーター",
+      tag: "競技復帰まで最短ルートで集中ケア",
+      desc: "走る・動く・運ぶ。アクティブな生活の中で、突然のケガや痛み。あなたに必要なのは「とにかく早く治して、また動けるようにする」こと。保険適用＋自費の組み合わせで、最速復帰を狙います。",
+      menu: ["order60", "elvio50"], pkg: "order12", opts: ["highvolt", "kotsuban"], care: ["ケガ直後はタンパク質＋ビタミンC＋亜鉛（卵・鶏むね・牡蠣・パプリカ）", "完治までアルコール休肝（治癒スピードが倍に）", "プロテイン or ゆで卵を運動後30分以内に必ず"]
+    },
+    "ASHM": { e: "🐯", name: "やんちゃ突発ジャガー",
+      tag: "また動くために、月額で守る",
+      desc: "趣味のスポーツや育児で、たまにギクッ。本格的に通う時間はないけど、放置するともっと悪化しそう。月額サブスクで「やってしまった日」だけ駆け込めるのが、あなたに合っています。",
+      menu: ["mainteSub", "seitai30"], pkg: "order12", opts: ["highvolt", "kyu"], care: ["運動後30分以内におにぎり＋ゆで卵（修復ゴールデンタイム）", "寝る前のヨーグルト・チーズで夜間も筋修復", "水分は1日2L以上。スポドリは糖質高めなので半分に薄めて"]
+    },
+    "ASBI": { e: "🦌", name: "動ける美のシカ",
+      tag: "「動けるカラダ＋美しさ」を集中で",
+      desc: "アクティブに動きたい、でも見た目もキレイでいたい欲張りさん。突発的に「最近、顔が疲れて見える」と気になり始めたタイプ。短期集中の美容鍼で、内側から輝きを取り戻しましょう。",
+      menu: ["biharikei60", "elvio40"], pkg: "biharikeiOpt9", opts: ["hariOpt", "ems"], care: ["ナッツ＋柑橘で『ビタミンE＋C』紫外線ガード食を毎日", "トマト＋アボカドの抗酸化最強コンビを意識", "運動後の糖質は和菓子・果物で。揚げ物より圧倒的に肌に優しい"]
+    },
+    "ASBM": { e: "🦩", name: "日焼け美フラミンゴ",
+      tag: "サブスクで通い放題、ゆるく美容",
+      desc: "外での活動が多く、日焼け・乾燥・むくみが気になる。でも、毎週ガチで通うほどでもない。サブスクで「美容ジム感覚」で通えるのが、あなたのスタイル。",
+      menu: ["biharikeiSub", "elvio30"], pkg: "biharikeiOpt9", opts: ["hariOpt", "head"], care: ["日焼け後はリコピン（トマト）・ビタミンE（ナッツ）で内側修復", "水分は1日2L＋電解質。脱水は肌のシワを加速させる", "夕食は21時まで。成長ホルモンで肌の再生力UP"]
+    },
+
+    // ----- A(アクティブ) × C(慢性) -----
+    "ACHI": { e: "🐎", name: "働きすぎ鋼の馬",
+      tag: "頑張り屋さんを、集中ケアで休ませる",
+      desc: "立ち仕事・力仕事・育児で、もう何年もカラダが休めていない。痛みはあるけど止まれない…そんなあなたには、回数券で「半強制的に休む日」を作るのが効きます。",
+      menu: ["order60", "seitai60"], pkg: "order24", opts: ["ems", "cupping"], care: ["鉄分（赤身肉・レバー・小松菜）で慢性疲労を打破", "マグネシウム＋ビタミンB群（豆腐・ナッツ・玄米）で神経を回復", "夕食は20時までに完了。ドカ食い厳禁"]
+    },
+    "ACHM": { e: "🦊", name: "サボリ上手のキツネ",
+      tag: "ゆるく賢く、月額で巡らせる",
+      desc: "頑張りすぎず、上手にラクをするのが得意なタイプ。慢性的な疲れはあるけど、ガチで通うのは性に合わない。月額サブスクで賢くメンテして、長く動けるカラダを保ちましょう。",
+      menu: ["mainteSub", "seitai30"], pkg: "order12", opts: ["kyu", "kotsuban"], care: ["1日1食は和定食スタイル（焼き魚＋味噌汁＋ご飯）", "コンビニ食でも『タンパク質＋野菜＋発酵』を意識", "甘いラテ・ジュースを水or無糖茶に置換するだけで激変"]
+    },
+    "ACBI": { e: "🐺", name: "キレイ目アスリート狼",
+      tag: "動ける&美しい、両立を集中で叶える",
+      desc: "アクティブ＆美意識高め。長年の蓄積疲労と、肌のハリ低下の両方が気になり始めたタイプ。短期集中の美容鍼＋整体で、内側からの若返りを狙えます。",
+      menu: ["biharikei60", "order60"], pkg: "biharikeiOpt9", opts: ["hariOpt", "ems"], care: ["タンパク質を体重×1.5g/日（肌・髪・筋肉の材料）", "抗酸化食材（ブルーベリー・カカオ・緑茶）で運動後の酸化対策", "良質な油（オリーブオイル・アマニ油）を小さじ1毎日"]
+    },
+    "ACBM": { e: "🦁", name: "自由気ままな美ライオン",
+      tag: "サブスクで、自由に美しく",
+      desc: "「縛られたくない、でも美しさは諦めたくない」自由派のあなた。月額の通い放題サブスクなら、忙しい時はパス、余裕がある時に集中して通える。これがあなたの理想形です。",
+      menu: ["biharikeiSub", "elvio40"], pkg: "biharikeiOpt9", opts: ["hariOpt", "head"], care: ["朝はスムージー（豆乳＋緑黄色野菜＋ベリー）で時短美容食", "外食では『揚げ物より蒸し・焼き』を選ぶ習慣に", "カフェイン・アルコールは水と同量で薄めて楽しむ"]
+    },
+  },
+
+  /* ===== メニュー定義 ===== */
+  menus: {
+    order60:    { name: "オーダーメイドコース 60分", price: "¥13,200", why: "鍼灸・電気・手技を最適に組合せ。複合症状にいちばん効く看板メニュー。" },
+    seitai30:   { name: "整体コース 30分", price: "¥5,940", why: "全身の疲れ・コリにサクッと効く軽メンテナンス。" },
+    seitai60:   { name: "整体コース 60分", price: "¥11,880", why: "深いコリまでじっくりほぐす。慢性疲労タイプ向け。" },
+    biharikei60:{ name: "美容鍼コース 60分", price: "¥10,560", why: "顔のリフトアップ・むくみ・くすみに。大手美容鍼の技術を当院価格で。" },
+    elvio30:    { name: "エルビオコース 30分", price: "¥4,200", why: "高周波で姿勢改善・産後ケアにアプローチ。短時間でも効果実感。" },
+    elvio40:    { name: "エルビオコース 40分", price: "¥5,400", why: "高周波で根本改善を目指す。冷え・巡り改善にも◎。" },
+    elvio50:    { name: "エルビオコース 50分", price: "¥6,600", why: "姿勢・産後・スポーツ後のケアにじっくり対応。" },
+    mainteSub:  { name: "メンテナンスサブスク（通い放題）", price: "¥10,780/月", why: "慢性肩こり・腰痛のメンテに最強コスパ。週2回通えば1回¥1,348。" },
+    biharikeiSub:{name: "美容鍼サブスク（通い放題）", price: "¥10,780/月", why: "週1〜2回の美容鍼で肌の生まれ変わりを内側から。" },
+  },
+
+  /* ===== 回数券プラン定義（短期集中したい方向け・補助商品） ===== */
+  packages: {
+    order12: { name: "オーダーメイド 12回券", price: "¥132,000", detail: "1回あたり¥11,000（17%OFF）。短期集中で根本ケアしたい方の王道プラン。" },
+    order24: { name: "オーダーメイド 24回券", price: "¥240,000", detail: "1回あたり¥10,000（24%OFF）。慢性のお悩みをしっかり卒業したい方に。" },
+    order36: { name: "オーダーメイド 36回券", price: "¥324,000", detail: "1回あたり¥9,000（32%OFF）。最大割引。本気でカラダを作り変えたい方へ。" },
+    biharikeiOpt9: { name: "美容鍼オプション 9回券", price: "¥18,000", detail: "1回¥2,000（20%OFF）。美容鍼を月2〜3回ペースで集中して受ける方に。" },
+  },
+
+  /* ===== サブスク定義（主力2商品） ===== */
+  subscriptions: {
+    mainte: {
+      key: "mainte",
+      emoji: "🦴",
+      name: "メンテナンスサブスク",
+      price: "¥10,780",
+      priceUnit: "/月",
+      tag: "慢性肩こり・腰痛・疲労のメンテに最強コスパ。週2回通えば1回あたり¥1,348。",
+      points: [
+        "月何回でも通い放題（予約制）",
+        "整体・電気・鍼を担当者が最適配分",
+        "「痛みを再発させない体」を月額で手に入れる",
+      ],
+    },
+    biharikei: {
+      key: "biharikei",
+      emoji: "✨",
+      name: "美容鍼サブスク",
+      price: "¥10,780",
+      priceUnit: "/月",
+      tag: "肌の生まれ変わり周期(28日)に合わせ、週1〜2回でも余裕の通い放題。",
+      points: [
+        "月何回でも通い放題（予約制）",
+        "リフトアップ・むくみ・くすみを内側から",
+        "美容クリニックに通うより圧倒的に低コスト",
+      ],
+    },
+  },
+
+  /* ===== 保険診療のご案内 ===== */
+  insurance: {
+    judo: {
+      key: "judo",
+      e: "🩹",
+      name: "柔整保険（接骨院の保険）",
+      target: "骨折・脱臼・捻挫・打撲・挫傷など、ハッキリしたケガ",
+      price: "1回 ¥300〜¥900",
+      note: "初診・3ヶ月ぶりの再診は ¥1,500 / 同意書不要・健康保険証ですぐ受診OK",
+    },
+    hari: {
+      key: "hari",
+      e: "🌿",
+      name: "はり灸保険",
+      target: "腰痛症・五十肩・神経痛・頚腕症候群・リウマチなど",
+      price: "1回 ¥350〜¥1,050",
+      note: "医師の同意書（有効期限6ヶ月）が必要。当院で取得サポートできます",
+    },
+    selfpay: {
+      key: "selfpay",
+      e: "✨",
+      name: "美容・予防は保険適用外",
+      target: "美容鍼・むくみ・たるみ・予防メンテなど",
+      price: "自費メニューでご案内",
+      note: "「🎁 初回無料体験」をぜひご利用ください",
+    },
+  },
+
+  /* ===== オプション施術（単発 +¥2,500 / 回数券で最大28%OFF） ===== */
+  optionMenus: {
+    highvolt: { e: "⚡", name: "ハイボルテージ",       price: "+¥2,500", why: "急性の痛み・深層筋に届く特殊電気。ぎっくり腰・寝違えに即効性◎" },
+    kotsuban: { e: "🦴", name: "骨盤調整",             price: "+¥2,500", why: "歪みを整え、姿勢と内臓位置をリセット。腰痛・産後ケアの定番" },
+    ems:      { e: "💪", name: "EMSインナー筋トレ",   price: "+¥2,500", why: "寝たまま腹横筋を鍛える。姿勢・体幹弱者に必須" },
+    cupping:  { e: "🟣", name: "カッピング（吸い玉）", price: "+¥2,500", why: "巡りを爆上げして老廃物を流す。慢性疲労・肩こりに" },
+    kyu:      { e: "🔥", name: "お灸",                 price: "+¥2,500", why: "ツボに温熱でじんわり。冷え・自律神経・婦人科系のお悩みに" },
+    hariOpt:  { e: "📍", name: "美容鍼追加",           price: "+¥2,500", why: "気になる部位（顔・首・肩）にプラス。リフトアップ効果UP" },
+    head:     { e: "🧠", name: "ヘッドスパ",           price: "+¥2,500", why: "頭皮ほぐしで眼精疲労・頭痛・寝つきを改善" },
+  },
+
+  axisLabels: {
+    DA: { D: { name: "デスク派", icon: "💺" }, A: { name: "アクティブ派", icon: "🏃" } },
+    SC: { S: { name: "急性ピリッ型", icon: "⚡" }, C: { name: "慢性じわじわ型", icon: "🌫" } },
+    HB: { H: { name: "治療優先タイプ", icon: "🩺" }, B: { name: "美容優先タイプ", icon: "✨" } },
+    IM: { I: { name: "集中ケア派", icon: "🔥" }, M: { name: "マイペース派", icon: "🌿" } },
+  },
+};
+
+/* ==========================================================
+   TRACKING (GAS + Google Sheets)
+   ========================================================== */
+// ↓ ここにGoogleスプレッドシート連携のGAS Web App URLを貼り付け
+//   未設定でも診断ツールは普通に動きます（送信がスキップされるだけ）
+const GAS_ENDPOINT = "";
+
+// 公式LINEのURL（短縮URLでも友だち追加URLでもOK）
+const LINE_URL = "https://lin.ee/seichiku"; // ← 正しいURLに差し替えてください
+
+// セッションIDを発行（同じ人の診断〜クリックを紐づける）
+const SESSION_ID = "sess_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+
+function track(event, payload = {}) {
+  // localStorageにも保持（ネットワーク不調時のフォールバック）
+  try {
+    const log = JSON.parse(localStorage.getItem("seichiku_log") || "[]");
+    log.push({ event, ...payload, sid: SESSION_ID, ts: new Date().toISOString() });
+    localStorage.setItem("seichiku_log", JSON.stringify(log.slice(-200)));
+  } catch(e) {}
+
+  if (!GAS_ENDPOINT) return;
+  try {
+    fetch(GAS_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({ event, ...payload, sid: SESSION_ID, ts: new Date().toISOString() })
+    }).catch(() => {});
+  } catch(e) {}
+}
+
+/* ==========================================================
+   APP
+   ========================================================== */
+const $ = (id) => document.getElementById(id);
+const state = { answers: [], idx: 0 };
+
+// LINE URLを反映
+document.addEventListener("DOMContentLoaded", () => {
+  const lineBtn = document.getElementById("ctaLine");
+  if (lineBtn && LINE_URL) lineBtn.href = LINE_URL;
+});
+
+// CTAクリックの計測
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("[data-track]");
+  if (!a) return;
+  track(a.dataset.track, {
+    code: $("rCode").textContent || "",
+    typeName: $("rName").textContent || "",
+  });
+});
+
+// 診断開始の計測
+track("page_view");
+
+// preview grid (16 emoji)
+function renderPreview() {
+  const codes = Object.keys(CONFIG.types);
+  $("previewGrid").innerHTML = codes.map(c => `<span>${CONFIG.types[c].e}</span>`).join("");
+}
+
+function showScreen(name) {
+  ["screen-start","screen-q","screen-result"].forEach(id =>
+    $(id).classList.toggle("hidden", id !== "screen-"+name)
+  );
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function renderQuestion() {
+  const total = CONFIG.questions.length;
+  const i = state.idx;
+  if (i >= total) { calcResult(); return; }
+  const q = CONFIG.questions[i];
+  $("qnum").textContent = `Q${i+1} / ${total}`;
+  $("qtext").textContent = q.text;
+  $("bar").style.width = ((i) / total * 100) + "%";
+  $("opts").innerHTML = q.options.map((o, idx) =>
+    `<button class="opt" data-v="${o.value}"><span class="emoji">${o.emoji}</span><span>${o.label}</span></button>`
+  ).join("");
+  $("opts").querySelectorAll(".opt").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.answers[i] = { axis: q.axis, value: btn.dataset.v };
+      state.idx++;
+      renderQuestion();
+    });
+  });
+  $("btnBack").style.visibility = i === 0 ? "hidden" : "visible";
+}
+
+function calcResult() {
+  // tally per axis (3択目"both"は両方に+1)
+  const tally = { DA: { D:0, A:0 }, SC: { S:0, C:0 }, HB: { H:0, B:0 }, IM: { I:0, M:0 } };
+  state.answers.forEach(a => {
+    if (a.value === "both") {
+      const [k1, k2] = Object.keys(tally[a.axis]);
+      tally[a.axis][k1]++; tally[a.axis][k2]++;
+    } else {
+      tally[a.axis][a.value]++;
+    }
+  });
+  const code =
+    (tally.DA.D >= tally.DA.A ? "D" : "A") +
+    (tally.SC.S >= tally.SC.C ? "S" : "C") +
+    (tally.HB.H >= tally.HB.B ? "H" : "B") +
+    (tally.IM.I >= tally.IM.M ? "I" : "M");
+
+  const t = CONFIG.types[code];
+  if (!t) { alert("診断エラー: " + code); return; }
+
+  $("rEmoji").textContent = t.e;
+  $("rCode").textContent = code;
+  $("rName").textContent = t.name;
+  $("rTagline").textContent = t.tag;
+  $("rDesc").textContent = t.desc;
+
+  // axes
+  const axesEl = $("rAxes"); axesEl.innerHTML = "";
+  ["DA","SC","HB","IM"].forEach((ax, n) => {
+    const v = code[n];
+    const lab = CONFIG.axisLabels[ax][v];
+    axesEl.innerHTML += `<div class="axis"><b>軸${n+1}</b>${lab.icon} ${lab.name}</div>`;
+  });
+
+  // insurance (タイプの目的軸・痛み軸から該当する保険を提示)
+  const insList = [];
+  if (code[2] === "B") {
+    insList.push(CONFIG.insurance.selfpay);
+  } else {
+    if (code[1] === "S") insList.push(CONFIG.insurance.judo);
+    if (code[1] === "C") insList.push(CONFIG.insurance.hari);
+    // 痛み軸が両方カウントされている場合（"both"回答を含む）は両方表示
+    if (insList.length === 0) {
+      insList.push(CONFIG.insurance.judo, CONFIG.insurance.hari);
+    }
+  }
+  $("rInsurance").innerHTML = insList.map(ins => `
+    <div class="ins-card">
+      <div class="ins-head">
+        <span class="ins-emoji">${ins.e}</span>
+        <span class="ins-name">${ins.name}</span>
+        <span class="ins-price">${ins.price}</span>
+      </div>
+      <div class="ins-target">対象: ${ins.target}</div>
+      <div class="ins-note">${ins.note}</div>
+    </div>
+  `).join("");
+
+  // options
+  $("rOptions").innerHTML = (t.opts || []).map(key => {
+    const o = CONFIG.optionMenus[key];
+    if (!o) return "";
+    return `<div class="opt-card">
+      <div class="opt-emoji">${o.e}</div>
+      <div class="opt-body">
+        <div class="opt-name"><span>${o.name}</span><span class="opt-price">${o.price}</span></div>
+        <div class="opt-why">${o.why}</div>
+      </div>
+    </div>`;
+  }).join("");
+
+  // subscriptions (main/sub based on H/B axis)
+  const isHealing = code[2] === "H";
+  const mainSub = isHealing ? CONFIG.subscriptions.mainte : CONFIG.subscriptions.biharikei;
+  const subSub  = isHealing ? CONFIG.subscriptions.biharikei : CONFIG.subscriptions.mainte;
+
+  $("rSubMainEmoji").textContent = mainSub.emoji;
+  $("rSubMainName").textContent  = mainSub.name;
+  $("rSubMainPrice").innerHTML   = `${mainSub.price}<small>${mainSub.priceUnit}</small>`;
+  $("rSubMainTag").textContent   = mainSub.tag;
+  $("rSubMainPoints").innerHTML  = mainSub.points.map(p => `<li>${p}</li>`).join("");
+
+  $("rSubSubEmoji").textContent = subSub.emoji;
+  $("rSubSubName").textContent  = subSub.name;
+  $("rSubSubPrice").innerHTML   = `${subSub.price}<small>${subSub.priceUnit}</small>`;
+  $("rSubSubTag").textContent   = subSub.tag;
+
+  // package (短期集中したい方向け)
+  const pkg = CONFIG.packages[t.pkg];
+  $("rPkgName").textContent = pkg.name;
+  $("rPkgPrice").textContent = pkg.price;
+  $("rPkgDetail").textContent = pkg.detail;
+
+  // home care
+  $("rHomeCare").innerHTML = t.care.map(c => `<li>${c}</li>`).join("");
+
+  // 計測: 診断完了
+  track("diagnosed", {
+    code,
+    typeName: t.name,
+    answers: state.answers.map(a => a.value).join(""),
+  });
+
+  showScreen("result");
+}
+
+/* ===== Event wiring ===== */
+$("btnStart").addEventListener("click", () => {
+  state.answers = []; state.idx = 0;
+  track("start");
+  showScreen("q");
+  renderQuestion();
+});
+$("btnBack").addEventListener("click", () => {
+  if (state.idx > 0) { state.idx--; renderQuestion(); }
+});
+$("btnRetry").addEventListener("click", () => {
+  state.answers = []; state.idx = 0;
+  showScreen("start");
+});
+$("btnShare").addEventListener("click", async () => {
+  const name = $("rName").textContent;
+  const emoji = $("rEmoji").textContent;
+  const text = `私のカラダMBTIは「${emoji} ${name}」でした！\nあなたは何タイプ？\n#成竹鍼灸整骨院 #カラダMBTI診断`;
+  const url = location.href;
+  if (navigator.share) {
+    try { await navigator.share({ title: "カラダMBTI診断", text, url }); } catch(e) {}
+  } else {
+    try {
+      await navigator.clipboard.writeText(text + "\n" + url);
+      alert("結果テキストをコピーしました！SNSに貼り付けてシェアできます。");
+    } catch(e) { alert("シェアできませんでした。"); }
+  }
+});
+
+renderPreview();
+</script>
+</body>
+</html>
